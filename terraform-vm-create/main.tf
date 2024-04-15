@@ -64,11 +64,11 @@ resource "vsphere_virtual_machine" "vm" {
   num_cpus 		= var.vm_vcpu
   memory		= var.vm_memory
   firmware		= var.vm_firmware 
-  disk {
-    label		= var.vm_disk_label
-    size		= var.vm_disk_size
-    thin_provisioned	= var.vm_disk_thin
-  }
+ # disk {
+ #   label		= var.vm_disk_label
+ #   size		= var.vm_disk_size
+ #   thin_provisioned	= var.vm_disk_thin
+#  }
 
   clone {
     template_uuid       = data.vsphere_virtual_machine.template.id

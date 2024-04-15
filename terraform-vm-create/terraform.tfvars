@@ -18,9 +18,9 @@ vm_memory	= "1024"
 vm_ipv4_netmask	 = "24"
 vm_ipv4_gateway	 = "192.168.0.1"
 vm_dns_servers = ["8.8.8.8", "8.8.4.4"]
-vm_disk_label  = "disk0"
-vm_disk_size  = "20"
-vm_disk_thin = "true"
+#vm_disk_label  = "disk0"
+#vm_disk_size  = "20"
+#vm_disk_thin = "true"
 vm_domain	= "host.vmadmin.local"
 vm_firmware = "efi"
 
