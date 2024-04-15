@@ -82,7 +82,7 @@ resource "vsphere_virtual_machine" "vm" {
         domain    = var.vm-domain
       }     
       network_interface {
-        ipv4_address	= each.value.vm-ip
+        ipv4_address	= each.value.vm_ip
         ipv4_netmask	= var.vm_ipv4_netmask
         dns_server_list	= var.vm_dns_servers
       }
