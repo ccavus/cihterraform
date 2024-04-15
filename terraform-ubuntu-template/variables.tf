@@ -70,25 +70,20 @@ variable "vm-linked-clone" {
   default     = "false"
 }
 
-variable "vm-cpu" {
+variable "vm_cpu" {
   type        = string
   description = "Number of vCPU for the vSphere virtual machines"
   default     = "2"
 }
 
-variable "vm-ram" {
+variable "vm_ram" {
   type        = string
   description = "Amount of RAM for the vSphere virtual machines (example: 2048)"
 }
 
-variable "vm-name" {
+variable "vm_name" {
   type        = string
   description = "The name of the vSphere virtual machines and the hostname of the machine"
-}
-
-variable "vm-guest-id" {
-  type        = string
-  description = "The ID of virtual machines operating system"
 }
 
 variable "vm-template-name" {
@@ -100,4 +95,57 @@ variable "vm-domain" {
   type        = string
   description = "Linux virtual machine domain name for the machine. This, along with host_name, make up the FQDN of the virtual machine"
   default     = ""
+}
+
+#VM
+
+variable "vm_template_name" {
+  description = "VM template with vmware-tools and perl installed"
+}
+
+variable "vm_guest_id" {
+  description = "VM guest ID"
+}
+
+variable "vm_vcpu" {
+  description = "The number of virtual processors to assign to this virtual machine."
+  default = "1"
+}
+
+variable "vm_memory" {
+  description = "The size of the virtual machine's memory in MB"
+  default = "1024"
+}
+
+variable "vm_ipv4_netmask" {
+  description = "The IPv4 subnet mask"
+}
+
+variable "vm_ipv4_gateway" {
+  description = "The IPv4 default gateway"
+}
+
+variable "vm_dns_servers" {
+  description = "The list of DNS servers to configure on the virtual machine"
+}
+
+variable "vm_domain" {
+  description = "Domain name of virtual machine"
+}
+
+variable "vms" {
+  type = map(any)
+  description = "List of virtual machines to be deployed"
+}
+
+variable "vm_disk_label" {
+  description = "Disk label of the created virtual machine"
+}
+
+variable "vm_disk_size" {
+  description = "Disk size of the created virtual machine in GB"
+}
+
+variable "vm_disk_thin" {
+  description = "Disk type of the created virtual machine , thin or thick"
 }

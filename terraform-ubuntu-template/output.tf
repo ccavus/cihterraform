@@ -12,9 +12,9 @@ output "ipv4" {
   }
 }
 
-output "ipv6" {
-  value = {
-      for vm in vsphere_virtual_machine.vm:
-      vm.name => vm.guest_ip_addresses[1]
-  }
-}
+#output "ipv6" {
+#  value = {
+#      for vm in vsphere_virtual_machine.vm:
+#      vm.name => vm.guest_ip_addresses[1]
+#  }
+#}
