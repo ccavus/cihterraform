@@ -17,10 +17,14 @@ vms = {
   cihtst02 = {
     name                = "cihtst02"
     vm_ip               = "192.168.0.171"
+    vm_cpu              = "2"
+    vm_ram              = "2048"
   },
   cihtst03 = {
     name                = "cihtst03"
     vm_ip               = "192.168.0.172"
+    vm_cpu              = "2"
+    vm_ram              = "2048"
   }
 }
 
